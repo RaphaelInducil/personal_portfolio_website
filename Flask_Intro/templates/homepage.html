@@ -1,86 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Home Page</title>
-    <style>
-        body {
-            background-color: lightblue;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        nav {
-            background-color: darkblue;
-            padding: 15px;
-            text-align: center;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+    }
 
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
+    header {
+      background-color: #222;
+      padding: 20px 40px;
+    }
 
-        nav ul li {
-            display: inline;
-            margin: 0 20px;
-        }
+    nav {
+      display: flex;
+      gap: 40px;
+    }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: bold;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
 
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
+    nav a:hover {
+      color: lightgray;
+    }
 
-        h1, p {
-            text-align: center;
-        }
+    main {
+      padding: 50px 40px;
+      text-align: center;
+    }
 
-        ul.links {
-            text-align: center;
-            list-style: none;
-            padding: 0;
-        }
+    h1 {
+      margin-bottom: 15px;
+    }
 
-        ul.links li {
-            margin: 10px 0;
-        }
+    p {
+      margin-bottom: 30px;
+      color: #ccc;
+    }
 
-        ul.links li a {
-            text-decoration: none;
-            color: darkblue;
-            font-size: 18px;
-        }
+    a.page-link {
+      color: lightblue;
+      text-decoration: none;
+      font-size: 18px;
+    }
 
-        ul.links li a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    a.page-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    
+
+  <header>
     <nav>
-            <ul>
-                <li><a href="/profile">Profile</a></li>
-                <li><a href="/works">Works</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
+      <a href="/home">Home</a>
+      <a href="/profile">Profile</a>
+      <a href="/works">Works</a>
+      <a href="/contacts">Contacts</a>
+    </nav>
+  </header>
 
+  <main>
+    <h1>Welcome to My Home Page</h1>
+    <p>This is the main page of my programming projects. Use the navigation above to explore.</p>
 
-        <h1>Welcome to my programming works</h1>
-        <p>Instruction: create a route and a page for the link that are not working</p>
+    <a href="/works" class="page-link">Go to Works</a>
+  </main>
 
-        <ul>
-            <li><a href="/works">toUpperCase</a></li>
-            <li><a href="/works/area/circle">Area of a Circle</a></li>
-            <li><a href="/works/area/triangle">Area of a Triangle</a></li>
-        </ul>
 </body>
 </html>
