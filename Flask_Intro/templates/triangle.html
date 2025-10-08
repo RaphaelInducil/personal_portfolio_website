@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert to Uppercase</title>
+</head>
+<body>
+    <h1>Convert String to Uppercase</h1>
+
+    <form action="/works/area/triangle" method="post">
+        <label for="width">Base:</label>
+        <input type="number" id="width" name="width" required>
+
+        <label for="height">Height:</label>
+        <input type="number" id="height" name="height" required>
+
+        <input type="submit" value="Calculate">
+    {% if result is not none %}
+    <p>Area of Triangle: {{ result }}</p>
+    {% endif %}
+</body>
+</html>

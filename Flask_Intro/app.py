@@ -22,5 +22,22 @@ def works():
 def contact():
     return "Contact Page. please create me an html page with dummy contact info"
 
+@app.route('/works/area/circle', methods=['GET', 'POST'])
+def acircle():
+    result = None
+    if request.method == 'POST':
+        radius = request.form.get('radius', '')
+        result = int(radius)*3.14*int(radius)
+    return render_template('circle.html', result=result)
+
+@app.route('/works/area/triangle', methods=['GET', 'POST'])
+def atriangle():
+    result = None
+    if request.method == 'POST':
+        width = request.form.get('width', '')
+        height = request.form.get('height', '')
+        result = (int(width)*int(height))*.5
+    return render_template('triangle.html', result=result)
+
 if __name__ == "__main__":
     app.run(debug=True)
