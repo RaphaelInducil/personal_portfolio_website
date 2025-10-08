@@ -25,6 +25,7 @@
     nav {
       display: flex;
       gap: 40px;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -32,6 +33,7 @@
       text-decoration: none;
       font-size: 1.2em;
       font-weight: bold;
+      transition: color 0.3s;
     }
 
     nav a:hover {
@@ -50,20 +52,32 @@
     p {
       margin-bottom: 30px;
       color: #ccc;
+      line-height: 1.6;
     }
 
     a.page-link {
-      color: lightblue;
-      text-decoration: none;
+      display: inline-block;
+      background-color: lightblue;
+      color: #111;
+      padding: 12px 25px;
+      border-radius: 8px;
       font-size: 18px;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.2s;
     }
 
     a.page-link:hover {
-      text-decoration: underline;
+      background-color: #5aa0d3;
+      transform: translateY(-2px);
     }
   </style>
 </head>
 <body>
+
+<video autoplay muted loop id="bg-video" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+  <source src="\static\images\Screen Recording 2025-10-08 231122.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
   <header>
     <nav>

@@ -25,6 +25,7 @@
     nav {
       display: flex;
       gap: 40px;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -32,6 +33,7 @@
       text-decoration: none;
       font-size: 1.2em;
       font-weight: bold;
+      transition: color 0.3s;
     }
 
     nav a:hover {
@@ -50,6 +52,7 @@
     p {
       margin-bottom: 30px;
       color: #ccc;
+      line-height: 1.6;
     }
 
     ul.links {
@@ -62,12 +65,19 @@
     }
 
     a.page-link {
-      color: lightblue;
+      display: inline-block;
+      background-color: lightblue;
+      color: #111;
+      padding: 12px 25px;
+      border-radius: 8px;
       text-decoration: none;
+      font-size: 18px;
+      transition: background-color 0.3s, transform 0.2s;
     }
 
     a.page-link:hover {
-      text-decoration: underline;
+      background-color: #5aa0d3;
+      transform: translateY(-2px);
     }
   </style>
 </head>
