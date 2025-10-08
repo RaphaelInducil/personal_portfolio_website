@@ -6,7 +6,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/')
+@app.route('/intro')
 def intro():
     return render_template('intro.html')
 
@@ -18,9 +18,11 @@ def home():
 def profile():
     return render_template('profile.html')
 
+@app.route('/works')
 def works():
     return render_template('works.html')
 
+@app.route('/works/touppercase', methods=['GET', 'POST'])
 def touppercase():
     result = None
     if request.method == 'POST':
