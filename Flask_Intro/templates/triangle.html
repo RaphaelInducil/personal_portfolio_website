@@ -1,21 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Convert to Uppercase</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of Triangle</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #111, #1a1a1a);
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #222;
+            padding: 20px 40px;
+        }
+
+        nav {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: lightgray;
+        }
+
+        main {
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            width: 60%;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            padding: 12px 25px;
+            background-color: #5aa0d3;
+            color: #111;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #5aa0d3;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        p.result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #ccc;
+        }
+    </style>
 </head>
 <body>
-    <h1>Convert String to Uppercase</h1>
 
-    <form action="/works/area/triangle" method="post">
-        <label for="width">Base:</label>
-        <input type="number" id="width" name="width" required>
+    <header>
+        <nav>
+            <a href="/home">Home</a>
+            <a href="/profile">Profile</a>
+            <a href="/works">Works</a>
+            <a href="/contact">Contacts</a>
+        </nav>
+    </header>
 
-        <label for="height">Height:</label>
-        <input type="number" id="height" name="height" required>
+    <main>
+        <h1>Calculate Area of Triangle</h1>
 
-        <input type="submit" value="Calculate">
-    {% if result is not none %}
-    <p>Area of Triangle: {{ result }}</p>
-    {% endif %}
+        <form action="/works/area/triangle" method="post">
+            <label for="width">Base:</label>
+            <input type="number" id="width" name="width" required>
+
+            <label for="height">Height:</label>
+            <input type="number" id="height" name="height" required>
+
+            <br>
+            <input type="submit" value="Calculate">
+        </form>
+
+        {% if result is not none %}
+        <p class="result">Area of Triangle: {{ result }}</p>
+        {% endif %}
+    </main>
+
 </body>
 </html>
