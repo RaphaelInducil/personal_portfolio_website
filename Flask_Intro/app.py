@@ -6,12 +6,22 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/')
+def intro():
+    return render_template('intro.html')
+
+@app.route('/home')
+def home():
+    return render_template('homepage.html')
+
 @app.route('/profile')
 def profile():
     return render_template('profile.html')
 
-@app.route('/works', methods=['GET', 'POST'])
 def works():
+    return render_template('works.html')
+
+def touppercase():
     result = None
     if request.method == 'POST':
         input_string = request.form.get('inputString', '')
@@ -20,7 +30,7 @@ def works():
 
 @app.route('/contact')
 def contact():
-    return "Contact Page. please create me an html page with dummy contact info"
+    return render_template('contact.html')
 
 @app.route('/works/area/circle', methods=['GET', 'POST'])
 def acircle():
